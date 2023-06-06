@@ -25,7 +25,7 @@ To use DETR with autodistill, you need to install the following dependency:
 
 
 ```bash
-pip3 install autodistill-owl-vit
+pip3 install autodistill-detr
 ```
 
 ## Quickstart
