@@ -45,7 +45,7 @@ target_model.predict("./roads/valid/-3-_jpg.rf.bee113a09b22282980c289842aedfc4a.
 
 ## License
 
-The code in this repository is licensed under an Apache 2.0 license. See the [Hugging Face model card for the DETR Resnet 50](https://huggingface.co/facebook/detr-resnet-50) model for more information on the model license.
+This project is licensed under an [Apache 2.0 license](LICENSE). See the [Hugging Face model card for the DETR Resnet 50](https://huggingface.co/facebook/detr-resnet-50) model for more information on the model license.
 
 ## 🏆 Contributing
 
