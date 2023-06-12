@@ -13,7 +13,7 @@
 
 This repository contains the code supporting the DETR base model for use with [Autodistill](https://github.com/autodistill/autodistill).
 
-[DETR](https://huggingface.co/facebook/detr-resnet-50) is a transformer-based computer vision model you can use for object detection. Autodistill supports use of the DETR Resnet 50 model developed by Meta Research.
+[DETR](https://huggingface.co/docs/transformers/model_doc/detr) is a transformer-based computer vision model you can use for object detection. Autodistill supports training a model using the Meta Research Resnet 50 checkpoint.
 
 Read the full [Autodistill documentation](https://autodistill.github.io/autodistill/).
 
@@ -33,25 +33,19 @@ pip3 install autodistill-detr
 ```python
 from autodistill_detr import DETR
 
-# define an ontology to map class names to our DETR prompt
-# the ontology dictionary has the format {caption: class}
-# where caption is the prompt sent to the base model, and class is the label that will
-# be saved for that caption in the generated annotations
-# then, load the model
-base_model = DETR(
-    ontology=CaptionOntology(
-        {
-            "person": "person",
-            "a forklift": "forklift"
-        }
-    )
-)
-base_model.label("./context_images", extension=".jpg")
+# load the model
+target_model = DETR()
+
+# train for 10 epochs
+target_model.train("./roads", epochs=10)
+
+# run inference on an image
+target_model.predict("./roads/valid/-3-_jpg.rf.bee113a09b22282980c289842aedfc4a.jpg")
 ```
 
 ## License
 
-The code in this repository is licensed under an .
+The code in this repository is licensed under an Apache 2.0 license. See the [Hugging Face model card for the DETR Resnet 50](https://huggingface.co/facebook/detr-resnet-50) model for more information on the model license.
 
 ## 🏆 Contributing
 
