@@ -17,7 +17,7 @@ This repository contains the code supporting the DETR base model for use with [A
 
 Read the full [Autodistill documentation](https://autodistill.github.io/autodistill/).
 
-Read the [DETR Autodistill documentation](https://autodistill.github.io/autodistill/base_models/detr/).
+Read the [DETR Autodistill documentation](https://autodistill.github.io/autodistill/target_models/detr/).
 
 ## Installation
 
